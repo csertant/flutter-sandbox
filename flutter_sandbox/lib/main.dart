@@ -1,10 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_sandbox/recipe.dart';
 import 'package:flutter_sandbox/recipe_detail.dart';
 import 'package:flutter_sandbox/theme.dart';
 
 void main() {
-  runApp(const SandboxApp());
+  runApp(EasyLocalization(
+    supportedLocales: const [
+      Locale('en'),
+      Locale('hu'),
+    ],
+    path: 'assets/translations',
+    fallbackLocale: const Locale('en'),
+    useOnlyLangCode: true,
+    child: const SandboxApp(),
+  ));
 }
 
 class SandboxApp extends StatelessWidget {
@@ -16,6 +27,9 @@ class SandboxApp extends StatelessWidget {
       title: 'Recipify',
       theme: sandboxLightThemeData,
       home: const SandboxHomePage(title: 'Recipe Calculator'),
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
     );
   }
 }
