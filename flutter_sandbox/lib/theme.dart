@@ -90,9 +90,9 @@ TextTheme sandboxTextTheme = const TextTheme(
 
 const sandboxLightColorScheme = ColorScheme(
   primary: sandboxHippieBlue,
-  primaryVariant: sandboxTarawera,
+  primaryContainer: sandboxTarawera,
   secondary: sandboxMonarch,
-  secondaryVariant: sandboxGunSmoke,
+  secondaryContainer: sandboxGunSmoke,
   surface: sandboxLavenderBlush,
   background: sandboxAmour,
   error: Color(0xffc80000),
@@ -109,7 +109,6 @@ ThemeData sandboxLightThemeData = ThemeData(
   //visualDensity: null,
   //primarySwatch: null,
   primaryColor: sandboxHippieBlue,
-  primaryColorBrightness: Brightness.light,
   primaryColorLight: null,
   primaryColorDark: sandboxTarawera,
   //canvasColor: null,
@@ -198,8 +197,8 @@ ThemeData sandboxLightThemeData = ThemeData(
   //textButtonTheme: null,
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      primary: sandboxLightColorScheme.primary,
-      onPrimary: sandboxLightColorScheme.background,
+      backgroundColor: sandboxLightColorScheme.primary,
+      foregroundColor: sandboxLightColorScheme.background,
       shape: StadiumBorder(
         side: BorderSide(color: sandboxLightColorScheme.primary),
       ),
@@ -207,7 +206,7 @@ ThemeData sandboxLightThemeData = ThemeData(
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      primary: sandboxLightColorScheme.background,
+      foregroundColor: sandboxLightColorScheme.background,
       backgroundColor: sandboxLightColorScheme.background.withOpacity(0.2),
       shape: StadiumBorder(
         side: BorderSide(color: sandboxLightColorScheme.background),

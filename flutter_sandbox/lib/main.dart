@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_sandbox/recipe.dart';
 import 'package:flutter_sandbox/recipe_detail.dart';
 import 'package:flutter_sandbox/theme.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
   runApp(EasyLocalization(
     supportedLocales: const [
       Locale('en'),
@@ -23,6 +24,7 @@ class SandboxApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //context.setLocale(const Locale('hu'));
     return MaterialApp(
       title: 'Recipify',
       theme: sandboxLightThemeData,

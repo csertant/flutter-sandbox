@@ -1,3 +1,5 @@
+import 'package:easy_localization/easy_localization.dart';
+
 class Recipe {
   String label;
   String imageUrl;
@@ -13,8 +15,8 @@ class Recipe {
 
   static List<Recipe> samples = [
     Recipe(
-      'Spaghetti and Meatballs',
-      'assets/2126711929_ef763de2b3_w.jpg',
+      'SPAGHETTI_AND_MEATBALLS'.tr(),
+      'assets/spaghetti_and_meatballs.jpg',
       4,
       [
         Ingredient(
@@ -36,7 +38,7 @@ class Recipe {
     ),
     Recipe(
       'Tomato Soup',
-      'assets/27729023535_a57606c1be.jpg',
+      'assets/tomato_soup.jpg',
       2,
       [
         Ingredient(
@@ -48,7 +50,7 @@ class Recipe {
     ),
     Recipe(
       'Grilled Cheese',
-      'assets/3187380632_5056654a19_b.jpg',
+      'assets/grilled_cheese.jpg',
       1,
       [
         Ingredient(
@@ -65,7 +67,7 @@ class Recipe {
     ),
     Recipe(
       'Chocolate Chip Cookies',
-      'assets/15992102771_b92f4cc00a_b.jpg',
+      'assets/chocolate_chip_cookies.jpg',
       24,
       [
         Ingredient(
@@ -87,7 +89,7 @@ class Recipe {
     ),
     Recipe(
       'Taco Salad',
-      'assets/8533381643_a31a99e8a6_c.jpg',
+      'assets/taco_salad.jpg',
       1,
       [
         Ingredient(
@@ -114,7 +116,7 @@ class Recipe {
     ),
     Recipe(
       'Hawaiian Pizza',
-      'assets/15452035777_294cefced5_c.jpg',
+      'assets/hawaiian_pizza.jpg',
       4,
       [
         Ingredient(
